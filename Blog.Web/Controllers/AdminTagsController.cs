@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Blog.Web.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Blog.Web.Controllers
 {
@@ -12,11 +13,14 @@ namespace Blog.Web.Controllers
 
         [HttpPost]
         [ActionName("Add")]
-        public IActionResult SubmitTag() 
+        public IActionResult Add(AddTagRequest addTagRequest) 
         {
-            //// Captura de inputs de forma manual
+            //// Captura los inputs del form de forma manual
             //var name = Request.Form["name"];
             //var displayName = Request.Form["displayName"];
+
+            var name = addTagRequest.Name;
+            var displayName = addTagRequest.DisplayName;
 
             return View("Add");
         }
