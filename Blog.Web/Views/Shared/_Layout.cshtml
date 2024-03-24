@@ -22,18 +22,31 @@
                         <li class="nav-item">
                             <a class="nav-link text-ligth" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Admin
                             </a>
+
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" 
-                                    asp-area="" 
-                                    asp-controller="AdminTags"
-                                    asp-action="Add">
-                                    Add Tag</a>
+                                <li>
+                                    <a class="dropdown-item"
+                                       asp-area=""
+                                       asp-controller="AdminTags"
+                                       asp-action="Add">
+                                        Add Tag
+                                    </a>
                                 </li>
+
+                                <li>
+                                    <a class="dropdown-item"
+                                       asp-area=""
+                                       asp-controller="AdminTags"
+                                       asp-action="List">
+                                        Show All Tags
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
 
@@ -42,11 +55,9 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
 
     <footer class="border-top footer text-muted">
         <div class="container">
